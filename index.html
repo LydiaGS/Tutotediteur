@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutoriel - LevelUp Editor</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- HERO -->
+    <header class="hero">
+        <div class="container">
+            <div class="Logo_contenaire">
+               <div class="logo"><img src="./asset/image/LOGO LVLUP_WHITE 02.png" alt=""></div>
+                <div class="logo">Level Up Creation <span>Editor</span></div>
+            </div>
+           
+            <h1>Le Tuto Express pour tout maîtriser</h1>
+            <p>Ton environnement de dev complet, direct dans le navigateur.</p>
+            <div class="liens"><a href="http://editor.levelupcreation.com/" target="_blank" class="btn-cta">
+                <i class="fas fa-rocket"></i> Ouvrir l'éditeur
+            </a>
+             <a href="https://levelupcreation.com/" target="_blank" class="btn-cta">
+                <i class="fas fa-globe"></i> Vers le site
+            </a></div>
+          
+        </div>
+    </header>
+
+    <!-- INTERFACE -->
+    <section class="section">
+        <div class="container">
+            <h2><i class="fas fa-compass"></i> 1. L'Interface (Le Saint Graal)</h2>
+            <p>C'est simple : 3 colonnes. Fichiers à gauche, Code au milieu, Résultat à droite.</p>
+            
+            <!-- NOUVEAU MOCKUP 3 COLONNES -->
+            <div class="layout-mockup">
+                <!-- Colonne 1 : Fichiers -->
+                <div class="mock-sidebar">
+                    <div class="sb-title">EXPLORER</div>
+                    <div class="sb-item active"><i class="fab fa-html5"></i> index.html</div>
+                    <div class="sb-item"><i class="fab fa-css3-alt"></i> style.css</div>
+                    <div class="sb-item"><i class="fab fa-js"></i> script.js</div>
+                    <div class="sb-btn"><i class="fas fa-plus"></i> Nouveau</div>
+                </div>
+
+                <!-- Colonne 2 : Code -->
+                <div class="mock-editor">
+                    <div class="editor-top">
+                        <div class="tabs"><div class="tab active">index.html</div></div>
+                        <div class="actions">
+                            <button title="Formater"><i class="fas fa-broom"></i></button>
+                            <button title="Aide"><i class="fas fa-question-circle"></i></button>
+                        </div>
+                    </div>
+                    <div class="editor-content">
+                        <span class="c-tag">&lt;!DOCTYPE html&gt;</span><br>
+                        <span class="c-tag">&lt;html&gt;</span><br>
+                        &nbsp;&nbsp;<span class="c-tag">&lt;head&gt;</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="c-tag">&lt;link</span> <span class="c-attr">rel</span>=<span class="c-val">"stylesheet"</span> <span class="c-attr">href</span>=<span class="c-val">"style.css"</span>&gt;<br>
+                        &nbsp;&nbsp;<span class="c-tag">&lt;/head&gt;</span><br>
+                        &nbsp;&nbsp;<span class="c-tag">&lt;body&gt;</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="c-comment">&lt;!-- Tape ici ! --&gt;</span><br>
+                        &nbsp;&nbsp;<span class="c-tag">&lt;/body&gt;</span><br>
+                        <span class="c-tag">&lt;/html&gt;</span>
+                    </div>
+                </div>
+
+                <!-- Colonne 3 : PREVIEW (NOUVEAU) -->
+                <div class="mock-preview">
+                    <div class="preview-top">
+                        <span><i class="fas fa-eye"></i> Preview</span>
+                        <button class="refresh-btn" title="Rafraîchir"><i class="fas fa-sync-alt"></i></button>
+                    </div>
+                    <div class="preview-content">
+                        <div style="padding:20px; text-align:center; color:#333;">
+                            <h3>Résultat ici</h3>
+                            <p>En temps réel !</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LINKER -->
+    <section class="section bg-darker">
+        <div class="container">
+            <h2><i class="fas fa-link"></i> 2. La Règle d'Or : Tout lier !</h2>
+            <p>Le fichier `index.html` est le chef d'orchestre. Il doit appeler les autres.</p>
+            
+            <div class="step-grid">
+                <div class="step">
+                    <h3><i class="fas fa-file-code"></i> Dans index.html</h3>
+                    <pre><code>&lt;!-- Mets ça dans le &lt;head&gt; --&gt;
+&lt;link rel="stylesheet" href="style.css"&gt;
+
+&lt;!-- Mets ça juste avant &lt;/body&gt; --&gt;
+&lt;script src="script.js"&gt;&lt;/script&gt;</code></pre>
+                </div>
+                <div class="step">
+                    <h3><i class="fas fa-folder-tree"></i> Dans l'explorateur</h3>
+                    <p>Les noms doivent correspondre EXACTEMENT :</p>
+                    <div class="file-tree-viz">
+                        <div>📁 mon-projet</div>
+                        <div class="indent">📄 index.html 👈</div>
+                        <div class="indent">📄 style.css 👈</div>
+                        <div class="indent">📄 script.js 👈</div>
+                    </div>
+                </div>
+            </div>
+            <div class="pro-tip">
+                <i class="fas fa-exclamation-triangle"></i> 
+                <strong>Erreur n°1 :</strong> Si ça marche pas, vérifie que tu as bien écrit `href="style.css"` et pas `href="style.css.txt"`.
+            </div>
+        </div>
+    </section>
+
+    <!-- SUPER POWERS -->
+    <section class="section">
+        <div class="container">
+            <h2><i class="fas fa-bolt"></i> 3. Les Super-Pouvoirs (pour coder vite)</h2>
+            <div class="cards-grid">
+                
+                <div class="card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Preview Live</h3>
+                    <p>Pas besoin de sauvegarder. Tu tapes, ça s'affiche à droite instantanément.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🤖</div>
+                    <h3>Auto-complétion</h3>
+                    <p>Tape `<div` et appuie sur <kbd>Tab</kbd>. Magique ! Ça ferme la balise pour toi.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🧹</div>
+                    <h3>Formater le Code</h3>
+                    <p>Ton code est mal formaté ? <br> Clique sur Format dans le menu du haut pour le nettoyer automatiquement.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🔄</div>
+                    <h3>Bouton Refresh</h3>
+                    <p>Si la preview bug, clique sur l'icône 🔄 en haut à droite de la preview.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon"><i class="fab fa-npm"></i></div>
+                    <h3>Packages NPM</h3>
+                    <p>Installe des librairies (GSAP, Three.js) via le bouton NPM.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-file-archive"></i></div>
+                    <h3>Export ZIP-Import ZIP</h3>
+                    <p>Télécharge tout ton projet en un clic pour le mettre en ligne.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Prêt ? <a href="http://editor.levelupcreation.com/">Clique ici pour coder</a>.</p>
+    </footer>
+
+    <script src="./javascripts/index.js"></script>
+</body>
+</html>
