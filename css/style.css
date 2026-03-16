@@ -50,8 +50,14 @@ a { color: var(--accent); text-decoration: none; }
 .btn-cta:hover { background: #0098ff; transform: translateY(-2px); }
 
 /* --- SECTIONS --- */
-.section { padding: 60px 0; }
-.bg-darker { background: var(--bg-darker); }
+.section {
+    padding: 60px 0;
+}
+
+.bg-darker {
+    background: var(--bg-darker);
+    max-width: 320px;
+}
 
 /* --- MOCKUP 3 COLONNES (LE PLUS IMPORTANT) --- */
 .layout-mockup {
@@ -192,4 +198,7 @@ img{
 }
 .step{
     max-width: 320px;
+}
+.container{
+    width: 100%;
 }
