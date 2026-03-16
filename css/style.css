@@ -190,3 +190,6 @@ img{
     text-align: center;
     gap: 3rem;
 }
+.step{
+    max-width: 320px;
+}
