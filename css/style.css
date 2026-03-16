@@ -56,7 +56,6 @@ a { color: var(--accent); text-decoration: none; }
 
 .bg-darker {
     background: var(--bg-darker);
-    max-width: 320px;
 }
 
 /* --- MOCKUP 3 COLONNES (LE PLUS IMPORTANT) --- */
@@ -189,16 +188,97 @@ img{
     width: 265px;
     height: 95px;
 }
-.liens{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 3rem;
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 600px) {
+
+    .container{
+        padding: 0 15px;
+    }
+
+    .hero{
+        padding: 60px 15px;
+    }
+
+    .hero h1{
+        font-size: 2rem;
+    }
+
+    .hero p{
+        font-size: 1rem;
+    }
+
+    .btn-cta{
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+
+    .layout-mockup{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .mock-sidebar{
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .mock-preview{
+        width: 100%;
+        height: 250px;
+        border-left: none;
+        border-top: 1px solid var(--border);
+    }
+
+    .editor-content{
+        padding: 15px;
+        font-size: 0.8rem;
+    }
+
+    .tabs{
+        flex-wrap: wrap;
+    }
+
+    .tab{
+        font-size: 0.75rem;
+        padding: 4px 8px;
+    }
+
+    img{
+        width: 200px;
+        height: auto;
+    }
 }
-.step{
-    max-width: 320px;
-}
-.container{
-    width: 100%;
+
+
+/* --- PETITS MOBILES (320px) --- */
+@media (max-width: 320px){
+
+    .hero h1{
+        font-size: 1.6rem;
+    }
+
+    .hero p{
+        font-size: 0.9rem;
+    }
+
+    .btn-cta{
+        width: 100%;
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+
+    .mock-sidebar{
+        font-size: 0.8rem;
+    }
+
+    .editor-content{
+        font-size: 0.75rem;
+        padding: 10px;
+    }
+
+    img{
+        width: 160px;
+    }
+
 }
